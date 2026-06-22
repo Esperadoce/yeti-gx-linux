@@ -17,7 +17,7 @@ Reverse-engineered from G Hub USB traffic captures.
 Copy the udev rule so any user can access the device:
 
 ```
-SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0afc", MODE="0666" 
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0afc", TAG+="uaccess"
 ```
 
 ```
